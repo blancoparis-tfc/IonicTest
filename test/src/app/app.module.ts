@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
+import { SQLite,SQLiteObject } from '@ionic-native/sqlite/ngx'
 
 @NgModule({
   declarations: [AppComponent, PreguntasComponent],
@@ -18,7 +19,8 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    SQLite,SQLiteObject
   ],
   bootstrap: [AppComponent]
 })
