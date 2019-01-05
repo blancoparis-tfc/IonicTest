@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Examen preguntas {{preguntas?.length}}({{errores}}) <ion-button size="small" (click)="corregir()" >Corregir</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let pregunta of preguntas" 
+    [ngStyle]="{'background-color': pregunta.color}"
+    >
+      <ion-list>
+        <ion-radio-group [(ngModel)]="pregunta.solucion" 
+        >
+          <ion-list-header>
+          {{pregunta.numero}}) {{pregunta.enunciado}} -> {{pregunta.solucion}}
+          </ion-list-header>
+          <ion-item *ngFor="let opcion of pregunta.opciones">
+            <ion-label>{{opcion.solucion}}) {{opcion.apartado}}</ion-label>
+            <ion-radio value="{{opcion.solucion}}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>  
+</ion-content>
