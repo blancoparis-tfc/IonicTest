@@ -232,9 +232,9 @@ export class PreguntasComponent implements OnInit {
     this.preguntas.forEach(it=>{
       let solucion=it.opciones.filter(it=>it.correcta)[0].solucion
       if(it.solucion==solucion){
-        it.color='green'
+        it.color='success'
       }else{
-        it.color='red'
+        it.color='danger'
         this.errores++
       }
 

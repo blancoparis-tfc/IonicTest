@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 
+
 @NgModule({
   declarations: [AppComponent, PreguntasComponent],
   entryComponents: [],
@@ -18,7 +19,7 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
 })

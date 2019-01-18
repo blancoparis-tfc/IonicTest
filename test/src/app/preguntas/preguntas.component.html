@@ -15,11 +15,11 @@
       <ion-list>
         <ion-radio-group [(ngModel)]="pregunta.solucion" 
         >
-          <ion-list-header  [ngStyle]="{'background-color': pregunta.color}" text-wrap>
+          <ion-item color="{{pregunta.color}}" [ngStyle]="{'background-color': pregunta.color}" text-wrap>
             <ion-label text-wrap>{{pregunta.numero}}) {{pregunta.enunciado}}</ion-label> 
-                  </ion-list-header>
+          </ion-item>
           <ion-item *ngFor="let opcion of pregunta.opciones" text-wrap>
-            <ion-label text-wrap> {{opcion.solucion}}) {{opcion.apartado}} </ion-label>
+            <ion-label text-wrap><p> {{opcion.solucion}}) {{opcion.apartado}}</p> </ion-label>
             <ion-radio value="{{opcion.solucion}}"></ion-radio>
           </ion-item>
         </ion-radio-group>
