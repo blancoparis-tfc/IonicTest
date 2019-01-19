@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {TestsService,Examen} from '../tests.service'
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,10 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  tests;
+  tests:Array<Examen>;
 
-  constructor(){
-    this.tests = ['Test 1','Test 2']  
+  constructor(private testService:TestsService){
+    this.tests = this.testService.getExamenes()  
   }
 
 }

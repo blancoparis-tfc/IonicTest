@@ -10,7 +10,6 @@
 
   <ion-slides pager="true">
     <ion-slide *ngFor="let pregunta of preguntas" 
-    [ngStyle]="{'background-color': pregunta.color}"
     >
       <ion-list>
         <ion-radio-group [(ngModel)]="pregunta.solucion" 
