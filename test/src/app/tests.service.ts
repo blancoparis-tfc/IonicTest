@@ -233,7 +233,26 @@ export class TestsService {
         new Opcion('  Artículo 43.','3',true) ,
         new Opcion('  Artículo 40.','4',false) 
     ])
+  ]),
+  new Examen('prueba',1,
+  [
+  new Pregunta('1',1,' La estructura actual del sistema sanitario aparece regulada en:',false,
+  [
+      new Opcion('  Solo en el artículo 43 de la Constitución española.','1',false) ,
+      new Opcion('  En el artículo 43, artículo 148 y artículo 149 de la Constitucion española.','2',true) ,
+      new Opcion('  En el antiguo Texto Refundido de la Ley de la Seguridad Social.','3',false) ,
+      new Opcion('  En el artículo 41 de la Constitución española, que establece la existencia de un régimen público de Seguridad Social.','4',false) 
   ])
+  ,
+  new Pregunta('2',2,' La sanidad exterior se refiere a:',false,
+  [
+      new Opcion('  El control epidemiológico, la lucha contra enfermedades transmisibles y la conservación de un ambiente saludable.','1',false) ,
+      new Opcion('  El control por parte del Estado de que todos los ciudadanos con independencia de su lugar de residencia reciban las mismas prestaciones sanitarias.','2',false) ,
+      new Opcion('  Actividades que se realicen en materia de vigilancia y control de los posibles riesgos para la salud derivados de la importación, exportación o tránsito de mercancías y tráfico internacional de viajeros.','3',true) ,
+      new Opcion('  Actividades que son reguladas de forma exclusiva por el Estado.','4',false) 
+  ])
+])
+
   ]
 }
 

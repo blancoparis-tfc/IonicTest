@@ -4,7 +4,7 @@ import {  PreguntasComponent} from './preguntas/preguntas.component'
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'test', component: PreguntasComponent}
+  { path: 'test/:id', component: PreguntasComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

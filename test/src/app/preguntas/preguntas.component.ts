@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TestsService,Pregunta} from '../tests.service'
+import {ActivatedRoute} from '@angular/router'
 
 
 @Component({
@@ -11,13 +12,16 @@ export class PreguntasComponent implements OnInit {
 
   errores=0;
 
-  preguntas:Array<Pregunta>
-  constructor(private testService:TestsService) { 
-    this.preguntas=this.testService.getTest(0)
-  }
+  preguntas:Array<Pregunta>=[]
+  constructor(private testService:TestsService, private route:ActivatedRoute) { 
+    
+    }
 
   ngOnInit() {
-  }
+      let id= this.route.snapshot.paramMap.get('id')
+      console.info(id)
+      this.preguntas=this.testService.getTest(id)
+    }
 
   corregir(){
     this.errores=0
