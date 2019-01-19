@@ -16,6 +16,9 @@
         >
           <ion-item color="{{pregunta.color}}" text-wrap>
             <ion-label text-wrap>{{pregunta.numero}}) {{pregunta.enunciado}}</ion-label> 
+            <ion-button (click)="respuesta(pregunta)">
+              C
+            </ion-button>
           </ion-item>
           <ion-item *ngFor="let opcion of pregunta.opciones" color="{{opcion.color}}" text-wrap>
             <ion-label text-wrap><p> {{opcion.solucion}}) {{opcion.apartado}}</p> </ion-label>

@@ -21,7 +21,12 @@ export class PreguntasComponent implements OnInit {
       let id= this.route.snapshot.paramMap.get('id')
       console.info(id)
       this.preguntas=this.testService.getTest(id)
+    
     }
+
+  respuesta(pregunta) {
+    pregunta.opciones.filter(it=>it.correcta)[0].color = 'success'
+  } 
 
   corregir(){
     this.errores=0
