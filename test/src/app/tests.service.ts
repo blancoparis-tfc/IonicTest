@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 export class Opcion{
   public estado:string='';
+  public color:String='white'  
   constructor(public apartado:string,public solucion:string,public correcta:boolean){}
 }
 export class Pregunta{

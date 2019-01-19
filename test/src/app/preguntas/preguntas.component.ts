@@ -26,14 +26,16 @@ export class PreguntasComponent implements OnInit {
   corregir(){
     this.errores=0
     this.preguntas.forEach(it=>{
-      let solucion=it.opciones.filter(it=>it.correcta)[0].solucion
+      let opcion=it.opciones.filter(it=>it.correcta)[0];
+      opcion.color = 'success'
+      let solucion=opcion.solucion
       if(it.solucion==solucion){
         it.color='success'
       }else{
         it.color='danger'
         this.errores++
       }
-
+      
     })
   }
 }
