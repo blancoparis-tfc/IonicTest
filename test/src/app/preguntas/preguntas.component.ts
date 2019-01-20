@@ -19,7 +19,6 @@ export class PreguntasComponent implements OnInit {
 
   ngOnInit() {
       let id= this.route.snapshot.paramMap.get('id')
-      console.info(id)
       this.preguntas=this.testService.getTest(id)
     
     }
@@ -41,6 +40,15 @@ export class PreguntasComponent implements OnInit {
         this.errores++
       }
       
+    })
+  }
+  resetear(){
+    this.errores=0
+    this.preguntas.forEach(it=>{
+      it.color="white"
+      it.opciones.forEach(it=>{
+        it.color="white"
+      })
     })
   }
 }

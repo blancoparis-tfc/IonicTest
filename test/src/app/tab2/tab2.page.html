@@ -10,9 +10,9 @@
 
   <ion-list>
     <ion-list-header>
-      Adamas
+      Adams
     </ion-list-header>
-    <ion-item *ngFor="let test of tests"  [href]="'/test/'+test.id"  >{{test.nombre}}</ion-item>
+    <ion-item *ngFor="let test of tests"  [routerLink]="'/test/'+test.id"  routerDirection="forward" >{{test.nombre}}</ion-item>
   </ion-list>
 
 </ion-content>
