@@ -10,9 +10,12 @@
 
   <ion-list>
     <ion-list-header>
-      Adams
+        <ion-label>Tipo</ion-label>
+        <ion-select [(ngModel)]="opcion" value="adams" (ionChange)="cambio()">
+            <ion-select-option  *ngFor="let categoria of categorias; let i = index" value="{{i}}">{{categoria.nombre}}</ion-select-option>
+        </ion-select>
     </ion-list-header>
-    <ion-item *ngFor="let test of tests"  [routerLink]="'/test/'+test.id"  routerDirection="forward" >{{test.nombre}}</ion-item>
+    <ion-item *ngFor="let test of testsSeleccionados"  [routerLink]="'/test/'+test.id"  routerDirection="forward" >{{test.nombre}} </ion-item>
   </ion-list>
 
 </ion-content>
